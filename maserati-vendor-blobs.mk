@@ -42,7 +42,6 @@ vendor/motorola/maserati/proprietary/bin/modemlog:/system/bin/modemlog \
 vendor/motorola/maserati/proprietary/bin/mot_boot_mode:/system/bin/mot_boot_mode \
 vendor/motorola/maserati/proprietary/bin/motobox:/system/bin/motobox \
 vendor/motorola/maserati/proprietary/bin/mount_cdrom.sh:/system/bin/mount_cdrom.sh \
-vendor/motorola/maserati/proprietary/bin/msp430:/system/bin/msp430 \
 vendor/motorola/maserati/proprietary/bin/secclkd:/system/bin/secclkd \
 vendor/motorola/maserati/proprietary/bin/startup_smc.sh:/system/bin/startup_smc.sh \
 vendor/motorola/maserati/proprietary/bin/tcmd:/system/bin/tcmd \
@@ -134,8 +133,6 @@ vendor/motorola/maserati/proprietary/lib/libexempi.so:/system/lib/libexempi.so \
 vendor/motorola/maserati/proprietary/lib/libextdispjni.so:/system/lib/libextdispjni.so \
 vendor/motorola/maserati/proprietary/lib/libhdcp.so:/system/lib/libhdcp.so \
 vendor/motorola/maserati/proprietary/lib/libhdmi.so:/system/lib/libhdmi.so \
-vendor/motorola/maserati/proprietary/lib/libhelixmediaplayerjni_ics.so:/system/lib/libhelixmediaplayerjni_ics.so \
-vendor/motorola/maserati/proprietary/lib/libhelixplayerndk_ics.so:/system/lib/libhelixplayerndk_icsi.so \
 vendor/motorola/maserati/proprietary/lib/libimage_jni.so:/system/lib/libimage_jni.so \
 vendor/motorola/maserati/proprietary/lib/libjni_nwp.so:/system/lib/libjni_nwp.so \
 vendor/motorola/maserati/proprietary/lib/libmetainfo.so:/system/lib/libmetainfo.so \
@@ -197,7 +194,6 @@ vendor/motorola/maserati/proprietary/lib/libmoto_nwif_ril.so:/system/lib/libmoto
 vendor/motorola/maserati/proprietary/lib/libmoto_qmi_ril.so:/system/lib/libmoto_qmi_ril.so \
 vendor/motorola/maserati/proprietary/lib/libmoto_ril.so:/system/lib/libmoto_ril.so \
 vendor/motorola/maserati/proprietary/lib/libmotdb.so:/system/lib/libmotdb.so \
-vendor/motorola/maserati/proprietary/lib/libmotintfutil.so:/system/lib/libmotintfutil.so \
 vendor/motorola/maserati/proprietary/lib/moto-ril-multimode.so:/system/lib/moto-ril-multimode.so \
 
 # include lib/hw

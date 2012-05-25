@@ -28,4 +28,4 @@ PRODUCT_COPY_FILES := \
 #DEVICE_PACKAGE_OVERLAYS := vendor/motorola/maserati/overlay
 
 $(call inherit-product, vendor/motorola/maserati/maserati-vendor-blobs.mk)
-$(call inherit-product, vendor/motorola/spyder/ducati-full.mk)
+$(call inherit-product, vendor/motorola/maserati/ducati-full.mk)
