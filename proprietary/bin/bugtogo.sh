@@ -9,10 +9,71 @@
 #               Motorola Mobility Confidential Proprietary
 #        (c) Copyright Motorola Mobility 2011, All Rights Reserved
 
+init(){
+    timeout_pm=10
+    timeout_am=10
+    timeout_dumpstate=120
+    timeout_df=10
+    timeout_screencap=10
+    fileExists "/system/bin/timedexec"
+    useTimedexec=$?
+}
+
+#Description:
+# $1 : log level.
+# $2 : log message
+b2glog(){
+    log -p $1 -t Bug2Go $2
+}
+
+#Description:
+# $1 : The elapsed time limit in seconds after which the command is terminated.
+# $2 : the command to be executed
+runTimedCommand(){
+    case $useTimedexec in
+        1)
+            output=$(timedexec $1 $2)
+            ;;
+        0)
+            output=$($2)
+            ;;
+    esac
+}
+
+#$1 : options and arguments
+b2gpm(){
+    runTimedCommand $timeout_pm "/system/bin/pm $1"
+}
+
+#$1 : am command and args
+b2gam(){
+    runTimedCommand $timeout_am "/system/bin/am $1"
+}
+
+#$1 : options
+b2gdumpstate(){
+    runTimedCommand $timeout_dumpstate "/system/bin/dumpstate $1"
+}
+
+#$1 : path
+b2gdf(){
+    runTimedCommand $timeout_df "/system/bin/df $1"
+}
+
+#$1 : path
+b2gscreencap(){
+    runTimedCommand $timeout_screencap "/system/bin/screencap $1"
+}
+
 #check if a package is installed on the device.
 isPackageInstalled(){
-    log -p v -t Bug2Go "isPackageInstalled() $1"
-    for package in $(/system/bin/pm list packages $1)
+    b2glog v "isPackageInstalled() $1"
+    b2gpm "list packages $1"
+    case $? in
+        0) ;;
+        *) b2glog e "b2gpm list packages $1 failed; status=$?"; return 0;;
+    esac
+    for package in $output
     do
         case "$package" in "package:$1")
             return 1
@@ -23,33 +84,26 @@ isPackageInstalled(){
 }
 
 getSystemProperties(){
-    log -p v -t Bug2Go "getSystemProperties()"
+    b2glog v "getSystemProperties()"
     timestamp=`date +'%Y-%m-%d_%H-%M-%S'`
-    product=`/system/bin/getprop ro.build.product`
-    device=`/system/bin/getprop ro.product.device`
-    buildType=`/system/bin/getprop ro.build.type`
-    serialNum=`/system/bin/getprop ro.serialno`
-    apVersion=`/system/bin/getprop ro.build.display.id`
-    model=`/system/bin/getprop ro.product.model`
-    board=`/system/bin/getprop ro.product.board`
-    brand=`/system/bin/getprop ro.product.brand`
+    product=$(/system/bin/getprop ro.build.product)
+    device=$(/system/bin/getprop ro.product.device)
+    buildType=$(/system/bin/getprop ro.build.type)
+    serialNum=$(/system/bin/getprop ro.serialno)
+    apVersion=$(/system/bin/getprop ro.build.display.id)
+    bpVersion=$(/system/bin/getprop gsm.version.baseband)
+    model=$(/system/bin/getprop ro.product.model)
+    board=$(/system/bin/getprop ro.product.board)
+    brand=$(/system/bin/getprop ro.product.brand)
     case $apVersion in "")
-        apVersion=`/system/bin/getprop ro.build.id`
+        apVersion=$(/system/bin/getprop ro.build.id)
         ;;
     esac
-    bpVersion=`/system/bin/getprop gsm.version.baseband`
-
-    #save the properties to file for Bug2Go App use
-    props="$props""product_model=$model\n"
-    props="$props""product_board=$board\n"
-    props="$props""product_brand=$brand"
-    echo -e "$props" > $storagePath/.system.properties
 }
 
 #A shell function checking if a file exists
 fileExists(){
-    lslines=`/system/bin/ls -l $1`
-    for line in $lslines
+    for line in $(/system/bin/ls -l $1)
     do
         return 1
     done
@@ -59,7 +113,7 @@ fileExists(){
 #parse the configuration file of the Bug2Go app, use default if the
 #configuration file is not present
 getRequiredSize(){
-    log -p v -t Bug2Go "getRequiredSize()"
+    b2glog v "getRequiredSize()"
     fileExists "/data/data/com.motorola.bug2go/files/conf.xml"
     # read the required size from the configuration file if file exists
     case $? in
@@ -75,7 +129,7 @@ getRequiredSize(){
             done < "/data/data/com.motorola.bug2go/files/conf.xml"
             ;;
         "0")
-            log -p d -t Bug2Go  "No req size config, use 40M default"
+            b2glog d  "No req size config, use 40M default"
             requiresize_conf=40
             ;;
     esac
@@ -84,8 +138,13 @@ getRequiredSize(){
 
 #returns the available size of a directory in Mb
 getAvailableSize(){
-    log -p v -t Bug2Go "getAvailableSize() $1"
-    dflines=`/system/bin/df $1`
+    b2glog v "getAvailableSize() $1"
+    b2gdf $1
+    case $? in
+        0) ;;
+        *) b2glog e "b2gdf $1 failed; status=$?"; return 0;;
+    esac
+    dflines=$output
     count=0
     for line in $dflines
     do
@@ -123,11 +182,11 @@ getAvailableSize(){
 }
 
 isSpaceEnough(){
-    log -p v -t Bug2Go "isSpaceEnough() $1 $2"
+    b2glog v "isSpaceEnough() $1 $2"
     getAvailableSize $1
     availsize=$?
 
-    log -p d -t Bug2Go "required: $2 M, available: $availsize M in $1"
+    b2glog d "required: $2 M, available: $availsize M in $1"
     result=$(($availsize - $2))
     case "$result" in
         -*) return 0
@@ -138,7 +197,7 @@ isSpaceEnough(){
 }
 
 getStoragePath(){
-    log -p v -t Bug2Go "getStoragePath() $1"
+    b2glog v "getStoragePath() $1"
     isSpaceEnough "/sdcard-ext" $1
     case $? in
     "0")
@@ -148,7 +207,7 @@ getStoragePath(){
             isSpaceEnough "/data/data/com.motorola.bug2go" $1
             case $? in
             "0")
-                log -p e -t Bug2Go "No available storage"
+                b2glog e "No available storage"
             ;;
             "1")
                 storagePath="/data/data/com.motorola.bug2go/files"
@@ -173,15 +232,15 @@ copyFileIfExists(){
     fileExists $1
     case $? in
         "1")
-            /system/bin/cp $1 $storageSubPath/$2
+            /system/bin/cp $1 $logFilePath/$2
         ;;
     esac
 }
 
 collectLogs(){
-    log -p v -t Bug2Go "collectLogs()"
+    b2glog v "collectLogs()"
     # Capture the dumpstate (AP state snapshot + log buffers)
-    /system/bin/dumpstate > $storageSubPath/bugreport_$timestamp.txt
+    b2gdumpstate "-o $logFilePath/bugreport_$timestamp"
 
     #Grab the AOL log files.  Make sure to grab the last two sets of overflow
     #logs too.  After the logs rotate, the most recent always goes to index 0,
@@ -211,10 +270,12 @@ collectLogs(){
         /sdcard/batterytracer/databases/current\
         /sdcard/batterytracer/databases/backup0"
     for loc in $battTracerLocs; do
-        copyFileIfExists $(ls $loc/*.btd)
-        case $(getprop ro.build.type) in
+        for file in $(/system/bin/ls $loc/*.btd); do
+            copyFileIfExists $file
+        done
+        case $(/system/bin/getprop ro.build.type) in
         user)
-            for file in $(ls $loc/*.log); do
+            for file in $(/system/bin/ls $loc/*.log); do
                 copyFileIfExists $file
             done
         ;;
@@ -233,36 +294,46 @@ collectLogs(){
 }
 
 mkdirIfNotExist(){
-    log -p v -t Bug2Go "mkdirIfNotExist() $1"
+    b2glog v "mkdirIfNotExist() $1"
     fileExists $1
     case $? in
         "0")
-            mkdir $1
+            /system/bin/mkdir $1
         ;;
     esac
 }
 
 startBug2Go(){
-    log -p v -t Bug2Go "startBug2Go()"
-    #start the Bug2Go App
-    /system/bin/am start -a motorola.intent.action.BUG2GO.START -t "text/plain"
+    b2glog v "startBug2Go()"
+
     getRequiredSize
     requiredsize=$?
 
     getStoragePath $requiredsize
     case $storagePath in
         "")
-            log -p e -t Bug2Go "Not enough space"
-            #Send error info to the Bug2Go app
-            /system/bin/am start -a motorola.intent.action.BUG2GO.ERR -t "text/plain" -e "reqsize" "$requiredsize M" -e "availsize" "$availsize M"
-            exit 1
+            b2glog e "Not enough space"
+            #Show error info
+            b2gam "start -a motorola.intent.action.BUG2GO.ERR -t text/plain -e errortype nostorage -e id $timestamp"
+            return 1
         ;;
     esac
-    getSystemProperties
-    storageSubPath="$storagePath/$timestamp"
-    log -p d -t Bug2Go "Storage path: $storageSubPath"
+
+    logFilePath="$storagePath/$timestamp"
+    b2glog d "Storage path: $logFilePath"
     mkdirIfNotExist $storagePath
-    /system/bin/mkdir $storageSubPath
+    /system/bin/mkdir $logFilePath
+
+    #put the attachments in a separated folder so that Bug2Go can handle it separately.
+    attachmentPath="$storagePath/screenshots"
+    b2glog d "Attachment path: $attachmentPath"
+    mkdirIfNotExist $attachmentPath
+
+    #capture the current screenshot
+    b2gscreencap "-p $attachmentPath/screenshot-$timestamp.png"
+
+    #Start the Bug2Go App
+    b2gam "start -a motorola.intent.action.BUG2GO.START -t text/plain -e id $timestamp"
 
     collectLogs
 
@@ -277,8 +348,9 @@ startBug2Go(){
     #        created, can be directories, separated by space if there are 2
     #        or more files
     info="save_path=$storagePath\n"
-    info="$info""files=$storageSubPath\n"
-    info="$info""files_to_remove=$storageSubPath $storagePath/bugreport_$timestamp.info\n"
+    info="$info""files=$logFilePath\n"
+    info="$info""screenshot=$attachmentPath/screenshot-$timestamp.png\n"
+    info="$info""files_to_remove=$storagePath/bugreport_$timestamp.info\n"
     info="$info""serial=$serialNum\n"
     info="$info""timestamp=$timestamp\n"
     info="$info""ap_version=$apVersion\n"
@@ -287,29 +359,27 @@ startBug2Go(){
     info="$info""device=$device\n"
     info="$info""build_type=$buildType"
     echo -e "$info" > $storagePath/bugreport_$timestamp.info
-    log -p d -t Bug2Go "Saved info to $storagePath/bugreport_$timestamp.info"
+    b2glog d "Saved info to $storagePath/bugreport_$timestamp.info"
 
     #Forward info to the Bug2Go app
-    /system/bin/am start -a motorola.intent.action.BUG2GO.END -t "text/plain" -e "report_info" "$storagePath/bugreport_$timestamp.info"
+    b2gam "start -a motorola.intent.action.BUG2GO.END -t text/plain -e report_info $storagePath/bugreport_$timestamp.info -e id $timestamp"
 }
 
 startBug2GoLite(){
-    log -p d -t Bug2GoLite "startBug2GoLite()"
+    b2glog d "startBug2GoLite()"
     # Start Bug2Go App
-    /system/bin/am start -a motorola.intent.action.BUG2GOLITE.START -t "text/plain"
-
-    getSystemProperties
+    b2gam "start -a motorola.intent.action.BUG2GOLITE.START -t text/plain"
 
     isSpaceEnough "/sdcard" 10
     case $? in
         0)
-            log -p e -t Bug2GoLite "SDcard not present or full, nowhere to store output"
-            /system/bin/am start -a motorola.intent.action.BUG2GOLITE.ERR -t "text/plain"
-            exit 1
+            b2glog e "SDcard not present or full, nowhere to store output"
+            b2gam "start -a motorola.intent.action.BUG2GOLITE.ERR -t text/plain"
+            return 1
         ;;
         1)
             storagePath="/sdcard/bug2go"
-            log -p d -t Bug2GoLite "Storage path: $storagePath"
+            b2glog d "Storage path: $storagePath"
             mkdirIfNotExist $storagePath
         ;;
     esac
@@ -319,55 +389,59 @@ startBug2GoLite(){
     /system/bin/gzip $storagePath/bugreport_$timestamp.txt
 
     # Forward info to the Bug2Go app
-    /system/bin/am start -a motorola.intent.action.BUG2GOLITE.END -t "application/gzip" \
-        -e "path" "$storagePath/bugreport_$timestamp.txt.gz" \
-        -e "serial" "$serialNum" \
-        -e "timestamp" "$timestamp" \
-        -e "ap_version" "$apVersion" \
-        -e "bp_version" "$bpVersion" \
-        -e "product" "$product" \
-        -e "device" "$device" \
-        -e "build_type" "$buildType"
+    b2gam "start -a motorola.intent.action.BUG2GOLITE.END -t application/gzip \
+        -e path $storagePath/bugreport_$timestamp.txt.gz \
+        -e serial $serialNum \
+        -e timestamp $timestamp \
+        -e ap_version $apVersion \
+        -e bp_version $bpVersion \
+        -e product $product \
+        -e device $device \
+        -e build_type $buildType"
 }
 
 main(){
-    log -p d -t Bug2Go "bugtogo.sh started"
+    init
+    b2glog d "bugtogo.sh started"
+    getSystemProperties
+    echo bug2go-native > /sys/power/wake_lock
     isPackageInstalled "com.motorola.bug2go"
     case $? in
         0)
             isPackageInstalled "com.motorola.bug2golite"
             case $? in
                 0)
-                    case $(getprop ro.build.type) in
+                    case $buildType in
                         user)
-                            case $(/system/bin/getprop persist.service.adb.enable) in
-                                1)
-                                    log -p v -t Bug2Go "Bug2Go.apk=N; Bug2GoLite.apk=N; UserBuild=Y; USBDebug=Y"
+                            case $(/system/bin/getprop init.svc.adbd) in
+                                running)
+                                    b2glog v "Bug2Go.apk=N; Bug2GoLite.apk=N; UserBuild=Y; USBDebug=Y"
                                     startBug2GoLite
                                 ;;
                                 *)
-                                    log -p v -t Bug2Go "Bug2Go.apk=N; Bug2GoLite.apk=N; UserBuild=Y; USBDebug=N"
+                                    b2glog v "Bug2Go.apk=N; Bug2GoLite.apk=N; UserBuild=Y; USBDebug=N"
                                 ;;
                             esac
                         ;;
                         *)
-                            log -p v -t Bug2Go "Bug2Go.apk=N; Bug2GoLite.apk=N; UserBuild=N"
+                            b2glog v "Bug2Go.apk=N; Bug2GoLite.apk=N; UserBuild=N"
                             startBug2GoLite
                         ;;
                     esac
                 ;;
                 1)
-                    log -p v -t Bug2Go "Bug2Go.apk=N; Bug2GoLite.apk=Y"
+                    b2glog v "Bug2Go.apk=N; Bug2GoLite.apk=Y"
                     startBug2GoLite
                 ;;
             esac
         ;;
         1)
-            log -p v -t Bug2Go "Bug2Go.apk=Y"
+            b2glog v "Bug2Go.apk=Y"
             startBug2Go
         ;;
     esac
-    log -p d -t Bug2Go "bugtogo.sh exited"
+    echo bug2go-native > /sys/power/wake_unlock
+    b2glog d "bugtogo.sh exited"
 }
 
 main

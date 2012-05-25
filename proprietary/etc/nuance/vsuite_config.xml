@@ -9,6 +9,7 @@
     <vsuite_feature_phonebook_resync_delay value="15000"/>
     <vsuite_feature_playList_picker_intent value="android.intent.action.PICK"/>
     <vsuite_feature_wakelock_use_on_after_release value="true"/>
+    <vsuite_feature_signal_strength_custom value="true"/>
 </config>
 
 

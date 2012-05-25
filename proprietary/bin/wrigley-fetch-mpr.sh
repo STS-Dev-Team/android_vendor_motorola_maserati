@@ -23,5 +23,5 @@ case $isWrigleyFound in 0) echo "Skipping dump for non-existent Wrigley"; exit 1
 # likely to false-positive, but also provides adequate protection against
 # hanging for a long time.
 for cmd in "state" "-d logs" "files" "-d panic" "atvc"; do
-    echo "$cmd" | nc -w 10 192.168.20.2 3002 | extract-embedded-files -o "$mprTempDir"
+    echo "$cmd" | nc -w 10 192.168.157.2 3002 | extract-embedded-files -o "$mprTempDir"
 done

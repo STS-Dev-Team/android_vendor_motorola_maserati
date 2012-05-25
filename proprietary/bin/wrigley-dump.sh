@@ -35,5 +35,5 @@ echo "file:end:txt:/${hostName}-ipv6_route.txt"
 # and writes.  Use a value that is not likely to false-positive, but also
 # provides adequate protection against hanging for a long time.
 for cmd in "state" "logs" "files" "panic" "atvc"; do
-    echo "-o wrigley $cmd" | nc -w 10 192.168.20.2 3002
+    echo "-o wrigley $cmd" | nc -w 10 192.168.157.2 3002
 done
