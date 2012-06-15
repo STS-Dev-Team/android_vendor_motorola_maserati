@@ -121,6 +121,10 @@ vendor/motorola/maserati/proprietary/lib/libbcbmsg.so:/system/lib/libbcbmsg.so \
 vendor/motorola/maserati/proprietary/lib/libbt-aptx-4.0.3.so:/system/lib/libbt-aptx-4.0.3.so \
 vendor/motorola/maserati/proprietary/lib/libcaps.so:/system/lib/libcaps.so \
 vendor/motorola/maserati/proprietary/lib/libcapsjava.so:/system/lib/libcapsjava.so \
+vendor/motorola/maserati/proprietary/lib/libdataencrypt.so:/system/lib/libdataencrypt.so \
+vendor/motorola/maserati/proprietary/lib/libdataencrypt_tpa.so:/system/lib/libdataencrypt_tpa.so \
+vendor/motorola/maserati/proprietary/lib/libdataencrypt_utils.so:/system/lib/libdataencrypt_utils.so \
+vendor/motorola/maserati/proprietary/lib/libdevicestats.so:/system/lib/libdevicestats.so \
 vendor/motorola/maserati/proprietary/lib/libdlnahttpjni.so:/system/lib/libdlnahttpjni.so \
 vendor/motorola/maserati/proprietary/lib/libdlnajni.so:/system/lib/libdlnajni.so \
 vendor/motorola/maserati/proprietary/lib/libdlnaprofileparser.so:/system/lib/libdlnaprofileparser.so \
@@ -144,6 +148,7 @@ vendor/motorola/maserati/proprietary/lib/libmotodbgutils.so:/system/lib/libmotod
 vendor/motorola/maserati/proprietary/lib/libmoto_mdmctrl.so:/system/lib/libmoto_mdmctrl.so \
 vendor/motorola/maserati/proprietary/lib/libmoto_netutil.so:/system/lib/libmoto_netutil.so \
 vendor/motorola/maserati/proprietary/lib/libmss.so:/system/lib/libmss.so \
+vendor/motorola/maserati/proprietary/lib/libmss.so.sig:/system/lib/libmss.so.sig \
 vendor/motorola/maserati/proprietary/lib/libnativedrm1.so:/system/lib/libnativedrm1.so \
 vendor/motorola/maserati/proprietary/lib/libnbgm.so:/system/lib/libnbgm.so \
 vendor/motorola/maserati/proprietary/lib/libnmea.so:/system/lib/libnmea.so \
