@@ -200,6 +200,7 @@ vendor/motorola/maserati/proprietary/lib/libmoto_qmi_ril.so:/system/lib/libmoto_
 vendor/motorola/maserati/proprietary/lib/libmoto_ril.so:/system/lib/libmoto_ril.so \
 vendor/motorola/maserati/proprietary/lib/libmotdb.so:/system/lib/libmotdb.so \
 vendor/motorola/maserati/proprietary/lib/moto-ril-multimode.so:/system/lib/moto-ril-multimode.so \
+vendor/motorola/maserati/proprietary/lib/libims_client_jni.so:/system/lib/libims_client_jni.so \
 
 # include lib/hw
 PRODUCT_COPY_FILES += \
