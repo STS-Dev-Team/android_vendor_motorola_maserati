@@ -240,3 +240,13 @@ PRODUCT_COPY_FILES += \
 vendor/motorola/maserati/proprietary/lib/libpostcapimgproc_intf.so:/system/lib/libpostcapimgproc_intf.so \
 vendor/motorola/maserati/proprietary/lib/hw/camera.omap4.so:/system/lib/hw/camera.omap4.so \
 
+# Load TCMD libs
+PRODUCT_COPY_FILES += \
+vendor/motorola/maserati/proprietary/lib/libaudiotcmd.so:/system/lib/libaudiotcmd.so \
+vendor/motorola/maserati/proprietary/lib/libtcmdcameraservice.so:/system/lib/libtcmdcameraservice.so \
+
+# Use phone libui.so and hwcomposer.omap4.so
+#PRODUCT_COPY_FILES += \
+#vendor/motorola/maserati/proprietary/lib/libui.so:/system/lib/libui.so \
+#vendor/motorola/maserati/proprietary/vendor/lib/hw/hwcomposer.omap4.so:/system/vendor/lib/hw/hwcomposer.omap4.so \
+
