@@ -34,7 +34,6 @@ vendor/motorola/maserati/proprietary/bin/dund:/system/bin/dund \
 vendor/motorola/maserati/proprietary/bin/ecckeyd:/system/bin/ecckeyd \
 vendor/motorola/maserati/proprietary/bin/enc_mgt_tool:/system/bin/enc_mgt_tool \
 vendor/motorola/maserati/proprietary/bin/ftmipcd:/system/bin/ftmipcd \
-vendor/motorola/maserati/proprietary/bin/JuniperVPNTools:/system/bin/JuniperVPNTools \
 vendor/motorola/maserati/proprietary/bin/libthermal-manager.cfg:/system/bin/libthermal-manager.cfg \
 vendor/motorola/maserati/proprietary/bin/logcatd:/system/bin/logcatd \
 vendor/motorola/maserati/proprietary/bin/logcatd-blan:/system/bin/logcatd-blan \
@@ -51,7 +50,6 @@ vendor/motorola/maserati/proprietary/bin/thermaldaemon:/system/bin/thermaldaemon
 vendor/motorola/maserati/proprietary/bin/tty2ttyd:/system/bin/tty2ttyd \
 vendor/motorola/maserati/proprietary/bin/usbd:/system/bin/usbd \
 vendor/motorola/maserati/proprietary/bin/whisperd:/system/bin/whisperd \
-vendor/motorola/maserati/proprietary/bin/vpnclientpm:/system/bin/vpnclientpm \
 
 # system/etc
 PRODUCT_COPY_FILES += \
@@ -73,13 +71,6 @@ vendor/motorola/maserati/proprietary/etc/supportedlocales.conf:/system/etc/suppo
 
 PRODUCT_COPY_FILES += \
 vendor/motorola/maserati/proprietary/etc/firmware/ap_bt_data.bin:/system/etc/firmware/ap_bt_data.bin \
-vendor/motorola/maserati/proprietary/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin.bin \
-vendor/motorola/maserati/proprietary/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin \
-vendor/motorola/maserati/proprietary/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin \
-vendor/motorola/maserati/proprietary/etc/firmware/ti-connectivity/wl128x-fw-4-mr.bin:/system/etc/firmware/ti-connectivity/wl128x-fw-4-mr.bin \
-vendor/motorola/maserati/proprietary/etc/firmware/ti-connectivity/wl128x-fw-4-plt.bin:/system/etc/firmware/ti-connectivity/wl128x-fw-4-plt.bin \
-vendor/motorola/maserati/proprietary/etc/firmware/ti-connectivity/wl128x-fw-4-sr.bin:/system/etc/firmware/ti-connectivity/wl128x-fw-4-sr.bin \
-vendor/motorola/maserati/proprietary/etc/firmware/ti-connectivity/wl1271-nvs.bin:/system/etc/firmware/ti-connectivity/wl1271-nvs.bin \
 vendor/motorola/maserati/proprietary/etc/nuance/vsuite_config.xml:/system/etc/nuance/vsuite_config.xml \
 vendor/motorola/maserati/proprietary/etc/ppp/peers/pppd-ril.options:/system/etc/ppp/peers/pppd-ril.options \
 vendor/motorola/maserati/proprietary/etc/updatecmds/google_generic_update.txt:/system/etc/updatecmds/google_generic_update.txt \
@@ -161,7 +152,6 @@ vendor/motorola/maserati/proprietary/lib/libmot_bluetooth_jni.so:/system/lib/lib
 vendor/motorola/maserati/proprietary/lib/libmotdrm1.so:/system/lib/libmotdrm1.so \
 vendor/motorola/maserati/proprietary/lib/libmotdrm1_jni.so:/system/lib/libmotdrm1_jni.so \
 vendor/motorola/maserati/proprietary/lib/libmotodbgutils.so:/system/lib/libmotodbgutils.so \
-vendor/motorola/maserati/proprietary/lib/libmoto_mdmctrl.so:/system/lib/libmoto_mdmctrl.so \
 vendor/motorola/maserati/proprietary/lib/libmoto_netutil.so:/system/lib/libmoto_netutil.so \
 vendor/motorola/maserati/proprietary/lib/libmss.so:/system/lib/libmss.so \
 vendor/motorola/maserati/proprietary/lib/libmss.so.sig:/system/lib/libmss.so.sig \
@@ -176,8 +166,6 @@ vendor/motorola/maserati/proprietary/lib/libpkip.so:/system/lib/libpkip.so \
 vendor/motorola/maserati/proprietary/lib/libpppd_plugin-ril.so:/system/lib/libpppd_plugin-ril.so \
 vendor/motorola/maserati/proprietary/lib/libprovlib.so:/system/lib/libprovlib.so \
 vendor/motorola/maserati/proprietary/lib/libquicksec.so:/system/lib/libquicksec.so \
-vendor/motorola/maserati/proprietary/lib/librds_util.so:/system/lib/librds_util.so \
-vendor/motorola/maserati/proprietary/lib/libril_rds.so:/system/lib/libril_rds.so \
 vendor/motorola/maserati/proprietary/lib/libscalado.so:/system/lib/libscalado.so \
 vendor/motorola/maserati/proprietary/lib/libsensorhub_jni.so:/system/lib/libsensorhub_jni.so \
 vendor/motorola/maserati/proprietary/lib/libsmapi.so:/system/lib/libsmapi.so \
@@ -211,10 +199,13 @@ vendor/motorola/maserati/proprietary/bin/wrigley-iptables.sh:/system/bin/wrigley
 vendor/motorola/maserati/proprietary/lib/libbabysit.so:/system/lib/libbabysit.so \
 vendor/motorola/maserati/proprietary/lib/libb64.so:/system/lib/libb64.so \
 vendor/motorola/maserati/proprietary/lib/lib-mot-lte-ril.so:/system/lib/lib-mot-lte-ril.so \
+vendor/motorola/maserati/proprietary/lib/libmoto_mdmctrl.so:/system/lib/libmoto_mdmctrl.so \
 vendor/motorola/maserati/proprietary/lib/libmoto_nwif_ril.so:/system/lib/libmoto_nwif_ril.so \
 vendor/motorola/maserati/proprietary/lib/libmoto_qmi_ril.so:/system/lib/libmoto_qmi_ril.so \
 vendor/motorola/maserati/proprietary/lib/libmoto_ril.so:/system/lib/libmoto_ril.so \
 vendor/motorola/maserati/proprietary/lib/libmotdb.so:/system/lib/libmotdb.so \
+vendor/motorola/maserati/proprietary/lib/librds_util.so:/system/lib/librds_util.so \
+vendor/motorola/maserati/proprietary/lib/libril_rds.so:/system/lib/libril_rds.so \
 vendor/motorola/maserati/proprietary/lib/moto-ril-multimode.so:/system/lib/moto-ril-multimode.so \
 vendor/motorola/maserati/proprietary/lib/libims_client_jni.so:/system/lib/libims_client_jni.so \
 
@@ -230,39 +221,16 @@ vendor/motorola/maserati/proprietary/xbin/drm1_func_test:/system/xbin/drm1_func_
 vendor/motorola/maserati/proprietary/xbin/dexdump:/system/xbin/dexdump \
 vendor/motorola/maserati/proprietary/xbin/nc:/system/xbin/nc \
 
-# system/vendor
-PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/vendor/bin/pvrsrvinit:/system/vendor/bin/pvrsrvinit \
-vendor/motorola/maserati/proprietary/vendor/lib/drm/libdrmwvmplugin.so:/system/vendor/lib/drm/libdrmwvmplugin.so \
-vendor/motorola/maserati/proprietary/vendor/lib/egl/libeglinfo.so:/system/vendor/lib/egl/libeglinfo.so \
-vendor/motorola/maserati/proprietary/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so:/system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so:/system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so:/system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/hw/gralloc.omap4.so:/system/vendor/lib/hw/gralloc.omap4.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libglslcompiler_SGX540_120.so:/system/vendor/lib/libglslcompiler_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libIMGegl_SGX540_120.so:/system/vendor/lib/libIMGegl_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libpvr2d_SGX540_120.so:/system/vendor/lib/libpvr2d_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libpvrANDROID_WSEGL_SGX540_120.so:/system/vendor/lib/libpvrANDROID_WSEGL_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libPVRScopeServices.so:/system/vendor/lib/libPVRScopeServices.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libsrv_init_SGX540_120.so:/system/vendor/lib/libsrv_init_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libsrv_um_SGX540_120.so:/system/vendor/lib/libsrv_um_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libusc_SGX540_120.so:/system/vendor/lib/libusc_SGX540_120.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libwvdrm_L3.so:/system/vendor/lib/libwvdrm_L3.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libwvm.so:/system/vendor/lib/libwvm.so \
-vendor/motorola/maserati/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:/system/vendor/lib/libWVStreamControlAPI_L3.so \
-
 # Camera libs we need for now
-PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/lib/libpostcapimgproc_intf.so:/system/lib/libpostcapimgproc_intf.so \
-vendor/motorola/maserati/proprietary/lib/hw/camera.omap4.so:/system/lib/hw/camera.omap4.so \
+#PRODUCT_COPY_FILES += \
+#vendor/motorola/maserati/proprietary/lib/libpostcapimgproc_intf.so:/system/lib/libpostcapimgproc_intf.so \
+#vendor/motorola/maserati/proprietary/lib/hw/camera.omap4.so:/system/lib/hw/camera.omap4.so \
 
 # Load TCMD libs
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/lib/libaudiotcmd.so:/system/lib/libaudiotcmd.so \
-vendor/motorola/maserati/proprietary/lib/libtcmdcameraservice.so:/system/lib/libtcmdcameraservice.so \
-
-# Use phone libui.so and hwcomposer.omap4.so
-#PRODUCT_COPY_FILES += \
-#vendor/motorola/maserati/proprietary/lib/libui.so:/system/lib/libui.so \
-#vendor/motorola/maserati/proprietary/vendor/lib/hw/hwcomposer.omap4.so:/system/vendor/lib/hw/hwcomposer.omap4.so \
+vendor/motorola/solana/proprietary/lib/libaudiotcmd.so:/system/lib/libaudiotcmd.so \
+vendor/motorola/solana/proprietary/lib/libfm_stack.so:/system/lib/libfm_stack.so \
+vendor/motorola/solana/proprietary/lib/libfmchr.so:/system/lib/libfmchr.so \
+vendor/motorola/solana/proprietary/lib/libmcphal.so:/system/lib/libmcphal.so \
+vendor/motorola/solana/proprietary/lib/libtcmdcameraservice.so:/system/lib/libtcmdcameraservice.so \
 
