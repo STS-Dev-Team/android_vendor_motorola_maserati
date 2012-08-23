@@ -1,236 +1,217 @@
-# Copyright (C) 2012 The Android Open Source Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-# This file was made by hand
-
-# All the blobs necessary for maserati
+VENDOR_BLOB_FOLDER := vendor/motorola/maserati/proprietary
 
 # system/bin
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/bin/akmd8975:/system/bin/akmd8975 \
-vendor/motorola/maserati/proprietary/bin/ap_gain.bin:/system/bin/ap_gain.bin \
-vendor/motorola/maserati/proprietary/bin/ap_gain_mmul.bin:/system/bin/ap_gain_mmul.bin \
-vendor/motorola/maserati/proprietary/bin/batch:/system/bin/batch \
-vendor/motorola/maserati/proprietary/bin/btcmd:/system/bin/btcmd \
-vendor/motorola/maserati/proprietary/bin/bthelp:/system/bin/bthelp \
-vendor/motorola/maserati/proprietary/bin/bttest_mot:/system/bin/bttest_mot \
-vendor/motorola/maserati/proprietary/bin/bugtogo.sh:/system/bin/bugtogo.sh \
-vendor/motorola/maserati/proprietary/bin/charge_only_mode:/system/bin/charge_only_mode \
-vendor/motorola/maserati/proprietary/bin/chat-ril:/system/bin/chat-ril \
-vendor/motorola/maserati/proprietary/bin/dbvc_atvc_property_set:/system/bin/dbvc_atvc_property_set \
-vendor/motorola/maserati/proprietary/bin/dumpe2fs:/system/bin/dumpe2fs \
-vendor/motorola/maserati/proprietary/bin/dund:/system/bin/dund \
-vendor/motorola/maserati/proprietary/bin/ecckeyd:/system/bin/ecckeyd \
-vendor/motorola/maserati/proprietary/bin/enc_mgt_tool:/system/bin/enc_mgt_tool \
-vendor/motorola/maserati/proprietary/bin/ftmipcd:/system/bin/ftmipcd \
-vendor/motorola/maserati/proprietary/bin/libthermal-manager.cfg:/system/bin/libthermal-manager.cfg \
-vendor/motorola/maserati/proprietary/bin/logcatd:/system/bin/logcatd \
-vendor/motorola/maserati/proprietary/bin/logcatd-blan:/system/bin/logcatd-blan \
-vendor/motorola/maserati/proprietary/bin/modemlog:/system/bin/modemlog \
-vendor/motorola/maserati/proprietary/bin/mot_boot_mode:/system/bin/mot_boot_mode \
-vendor/motorola/maserati/proprietary/bin/motobox:/system/bin/motobox \
-vendor/motorola/maserati/proprietary/bin/mount_cdrom.sh:/system/bin/mount_cdrom.sh \
-vendor/motorola/maserati/proprietary/bin/secclkd:/system/bin/secclkd \
-vendor/motorola/maserati/proprietary/bin/startup_smc.sh:/system/bin/startup_smc.sh \
-vendor/motorola/maserati/proprietary/bin/tcmd:/system/bin/tcmd \
-vendor/motorola/maserati/proprietary/bin/tcmdhelp:/system/bin/tcmdhelp \
-vendor/motorola/maserati/proprietary/bin/testpppd:/system/bin/testpppd \
-vendor/motorola/maserati/proprietary/bin/thermaldaemon:/system/bin/thermaldaemon \
-vendor/motorola/maserati/proprietary/bin/tty2ttyd:/system/bin/tty2ttyd \
-vendor/motorola/maserati/proprietary/bin/usbd:/system/bin/usbd \
-vendor/motorola/maserati/proprietary/bin/whisperd:/system/bin/whisperd \
+$(VENDOR_BLOB_FOLDER)/bin/akmd8975:/system/bin/akmd8975 \
+$(VENDOR_BLOB_FOLDER)/bin/ap_gain.bin:/system/bin/ap_gain.bin \
+$(VENDOR_BLOB_FOLDER)/bin/ap_gain_mmul.bin:/system/bin/ap_gain_mmul.bin \
+$(VENDOR_BLOB_FOLDER)/bin/batch:/system/bin/batch \
+$(VENDOR_BLOB_FOLDER)/bin/btcmd:/system/bin/btcmd \
+$(VENDOR_BLOB_FOLDER)/bin/bthelp:/system/bin/bthelp \
+$(VENDOR_BLOB_FOLDER)/bin/bttest_mot:/system/bin/bttest_mot \
+$(VENDOR_BLOB_FOLDER)/bin/bugtogo.sh:/system/bin/bugtogo.sh \
+$(VENDOR_BLOB_FOLDER)/bin/charge_only_mode:/system/bin/charge_only_mode \
+$(VENDOR_BLOB_FOLDER)/bin/chat-ril:/system/bin/chat-ril \
+$(VENDOR_BLOB_FOLDER)/bin/dbvc_atvc_property_set:/system/bin/dbvc_atvc_property_set \
+$(VENDOR_BLOB_FOLDER)/bin/dumpe2fs:/system/bin/dumpe2fs \
+$(VENDOR_BLOB_FOLDER)/bin/dund:/system/bin/dund \
+$(VENDOR_BLOB_FOLDER)/bin/ecckeyd:/system/bin/ecckeyd \
+$(VENDOR_BLOB_FOLDER)/bin/enc_mgt_tool:/system/bin/enc_mgt_tool \
+$(VENDOR_BLOB_FOLDER)/bin/ftmipcd:/system/bin/ftmipcd \
+$(VENDOR_BLOB_FOLDER)/bin/libthermal-manager.cfg:/system/bin/libthermal-manager.cfg \
+$(VENDOR_BLOB_FOLDER)/bin/logcatd:/system/bin/logcatd \
+$(VENDOR_BLOB_FOLDER)/bin/logcatd-blan:/system/bin/logcatd-blan \
+$(VENDOR_BLOB_FOLDER)/bin/modemlog:/system/bin/modemlog \
+$(VENDOR_BLOB_FOLDER)/bin/mot_boot_mode:/system/bin/mot_boot_mode \
+$(VENDOR_BLOB_FOLDER)/bin/motobox:/system/bin/motobox \
+$(VENDOR_BLOB_FOLDER)/bin/mount_cdrom.sh:/system/bin/mount_cdrom.sh \
+$(VENDOR_BLOB_FOLDER)/bin/secclkd:/system/bin/secclkd \
+$(VENDOR_BLOB_FOLDER)/bin/startup_smc.sh:/system/bin/startup_smc.sh \
+$(VENDOR_BLOB_FOLDER)/bin/tcmd:/system/bin/tcmd \
+$(VENDOR_BLOB_FOLDER)/bin/tcmdhelp:/system/bin/tcmdhelp \
+$(VENDOR_BLOB_FOLDER)/bin/testpppd:/system/bin/testpppd \
+$(VENDOR_BLOB_FOLDER)/bin/thermaldaemon:/system/bin/thermaldaemon \
+$(VENDOR_BLOB_FOLDER)/bin/tty2ttyd:/system/bin/tty2ttyd \
+$(VENDOR_BLOB_FOLDER)/bin/usbd:/system/bin/usbd \
+$(VENDOR_BLOB_FOLDER)/bin/whisperd:/system/bin/whisperd \
 
 # system/etc
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/etc/audio_effects.conf:/system/etc/audio_effects.conf \
-vendor/motorola/maserati/proprietary/etc/backup_targets.csv:/system/etc/backup_targets.csv \
-vendor/motorola/maserati/proprietary/etc/btpan.conf:/system/etc/btpan.conf \
-vendor/motorola/maserati/proprietary/etc/ecryptfs.tab:/system/etc/ecryptfs.tab \
-vendor/motorola/maserati/proprietary/etc/encrypt.tab:/system/etc/encrypt.tab \
-vendor/motorola/maserati/proprietary/etc/event-log-tags:/system/etc/event-log-tags \
-vendor/motorola/maserati/proprietary/etc/excluded-input-devices.xml:/system/etc/excluded-input-devices.xml \
-vendor/motorola/maserati/proprietary/etc/opl.dat.enc:/system/etc/opl.dat.enc \
-vendor/motorola/maserati/proprietary/etc/priority_notifications_config.xml:/system/etc/priority_notifications_config.xml \
-vendor/motorola/maserati/proprietary/etc/smc_android_cfg.ini:/system/etc/smc_android_cfg.ini \
-vendor/motorola/maserati/proprietary/etc/smc_pa.ift:/system/etc/smc_pa.ift \
-vendor/motorola/maserati/proprietary/etc/smc_pa_pk_4_8Mb_ipa.bin:/system/etc/smc_pa_pk_4_8Mb_ipa.bin \
-vendor/motorola/maserati/proprietary/etc/smc_pa_pk_4_ipa.bin:/system/etc/smc_pa_pk_4_ipa.bin \
-vendor/motorola/maserati/proprietary/etc/supportedlocales.conf:/system/etc/supportedlocales.conf \
+$(VENDOR_BLOB_FOLDER)/etc/audio_effects.conf:/system/etc/audio_effects.conf \
+$(VENDOR_BLOB_FOLDER)/etc/backup_targets.csv:/system/etc/backup_targets.csv \
+$(VENDOR_BLOB_FOLDER)/etc/btpan.conf:/system/etc/btpan.conf \
+$(VENDOR_BLOB_FOLDER)/etc/ecryptfs.tab:/system/etc/ecryptfs.tab \
+$(VENDOR_BLOB_FOLDER)/etc/encrypt.tab:/system/etc/encrypt.tab \
+$(VENDOR_BLOB_FOLDER)/etc/event-log-tags:/system/etc/event-log-tags \
+$(VENDOR_BLOB_FOLDER)/etc/excluded-input-devices.xml:/system/etc/excluded-input-devices.xml \
+$(VENDOR_BLOB_FOLDER)/etc/opl.dat.enc:/system/etc/opl.dat.enc \
+$(VENDOR_BLOB_FOLDER)/etc/priority_notifications_config.xml:/system/etc/priority_notifications_config.xml \
+$(VENDOR_BLOB_FOLDER)/etc/smc_android_cfg.ini:/system/etc/smc_android_cfg.ini \
+$(VENDOR_BLOB_FOLDER)/etc/smc_pa.ift:/system/etc/smc_pa.ift \
+$(VENDOR_BLOB_FOLDER)/etc/smc_pa_pk_4_8Mb_ipa.bin:/system/etc/smc_pa_pk_4_8Mb_ipa.bin \
+$(VENDOR_BLOB_FOLDER)/etc/smc_pa_pk_4_ipa.bin:/system/etc/smc_pa_pk_4_ipa.bin \
+$(VENDOR_BLOB_FOLDER)/etc/supportedlocales.conf:/system/etc/supportedlocales.conf \
 
 
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/etc/firmware/ap_bt_data.bin:/system/etc/firmware/ap_bt_data.bin \
-vendor/motorola/maserati/proprietary/etc/nuance/vsuite_config.xml:/system/etc/nuance/vsuite_config.xml \
-vendor/motorola/maserati/proprietary/etc/ppp/peers/pppd-ril.options:/system/etc/ppp/peers/pppd-ril.options \
-vendor/motorola/maserati/proprietary/etc/updatecmds/google_generic_update.txt:/system/etc/updatecmds/google_generic_update.txt \
-vendor/motorola/maserati/proprietary/etc/VideoEditorLite/mve.ini:/system/etc/VideoEditorLite/mve.ini \
-vendor/motorola/maserati/proprietary/etc/vsensor.d/MeaningFulLocation.vsensor:/system/etc/vsensor.d/MeaningFulLocation.vsensor \
-vendor/motorola/maserati/proprietary/etc/wifi/wlan_fem.ini:/system/etc/wifi/wlan_fem.ini \
-vendor/motorola/maserati/proprietary/etc/motorola/12m/key_code_map.txt:system/etc/motorola/12m/key_code_map.txt \
-vendor/motorola/maserati/proprietary/etc/security/suplcerts.bks:system/etc/security/suplcerts.bks \
-vendor/motorola/maserati/proprietary/etc/permissions/com.verizon.hardware.telephony.ehrpd.xml:system/etc/permissions/com.verizon.hardware.telephony.ehrpd.xml \
-vendor/motorola/maserati/proprietary/etc/permissions/com.verizon.hardware.telephony.lte.xml:system/etc/permissions/com.verizon.hardware.telephony.lte.xml \
+$(VENDOR_BLOB_FOLDER)/etc/firmware/ap_bt_data.bin:/system/etc/firmware/ap_bt_data.bin \
+$(VENDOR_BLOB_FOLDER)/etc/nuance/vsuite_config.xml:/system/etc/nuance/vsuite_config.xml \
+$(VENDOR_BLOB_FOLDER)/etc/ppp/peers/pppd-ril.options:/system/etc/ppp/peers/pppd-ril.options \
+$(VENDOR_BLOB_FOLDER)/etc/updatecmds/google_generic_update.txt:/system/etc/updatecmds/google_generic_update.txt \
+$(VENDOR_BLOB_FOLDER)/etc/VideoEditorLite/mve.ini:/system/etc/VideoEditorLite/mve.ini \
+$(VENDOR_BLOB_FOLDER)/etc/vsensor.d/MeaningFulLocation.vsensor:/system/etc/vsensor.d/MeaningFulLocation.vsensor \
+$(VENDOR_BLOB_FOLDER)/etc/wifi/wlan_fem.ini:/system/etc/wifi/wlan_fem.ini \
+$(VENDOR_BLOB_FOLDER)/etc/motorola/12m/key_code_map.txt:system/etc/motorola/12m/key_code_map.txt \
+$(VENDOR_BLOB_FOLDER)/etc/security/suplcerts.bks:system/etc/security/suplcerts.bks \
+$(VENDOR_BLOB_FOLDER)/etc/permissions/com.verizon.hardware.telephony.ehrpd.xml:system/etc/permissions/com.verizon.hardware.telephony.ehrpd.xml \
+$(VENDOR_BLOB_FOLDER)/etc/permissions/com.verizon.hardware.telephony.lte.xml:system/etc/permissions/com.verizon.hardware.telephony.lte.xml \
 
+# webtop
+PRODUCT_COPY_FILES += \
+$(VENDOR_BLOB_FOLDER)/usr/idc/evfwd.idc:system/usr/idc/evfwd.idc \
+$(VENDOR_BLOB_FOLDER)/usr/keychars/evfwd.kcm:system/usr/keychars/evfwd.kcm \
+$(VENDOR_BLOB_FOLDER)/usr/keylayout/evfwd.kl:system/usr/keylayout/evfwd.kl \
 
 # system/usr
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/usr/bin/gki_pd_notifier:system/usr/bin/gki_pd_notifier \
-vendor/motorola/maserati/proprietary/usr/bin/panic_daemon:system/usr/bin/panic_daemon \
-vendor/motorola/maserati/proprietary/usr/idc/evfwd.idc:system/usr/idc/evfwd.idc \
-vendor/motorola/maserati/proprietary/usr/idc/Motorola_Mobility_Motorola_HD_Dock.idc:system/usr/idc/Motorola_Mobility_Motorola_HD_Dock.idc \
-vendor/motorola/maserati/proprietary/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-vendor/motorola/maserati/proprietary/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-vendor/motorola/maserati/proprietary/usr/keychars/evfwd.kcm:system/usr/keychars/evfwd.kcm \
-vendor/motorola/maserati/proprietary/usr/keychars/omap4-keypad.kcm:system/usr/keychars/omap4-keypad.kcm \
-vendor/motorola/maserati/proprietary/usr/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
-vendor/motorola/maserati/proprietary/usr/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
-vendor/motorola/maserati/proprietary/usr/keylayout/atmxt-i2c.kl:system/usr/keylayout/atmxt-i2c.kl \
-vendor/motorola/maserati/proprietary/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-vendor/motorola/maserati/proprietary/usr/keylayout/cpcap-key.kl:system/usr/keylayout/cpcap-key.kl \
-vendor/motorola/maserati/proprietary/usr/keylayout/evfwd.kl:system/usr/keylayout/evfwd.kl \
-vendor/motorola/maserati/proprietary/usr/keylayout/omap4-keypad.kl:system/usr/keylayout/omap4-keypad.kl \
-vendor/motorola/maserati/proprietary/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-vendor/motorola/maserati/proprietary/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
-vendor/motorola/maserati/proprietary/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
+$(VENDOR_BLOB_FOLDER)/usr/share/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf \
+$(VENDOR_BLOB_FOLDER)/usr/bin/gki_pd_notifier:system/usr/bin/gki_pd_notifier \
+$(VENDOR_BLOB_FOLDER)/usr/bin/panic_daemon:system/usr/bin/panic_daemon \
+$(VENDOR_BLOB_FOLDER)/usr/idc/Motorola_Mobility_Motorola_HD_Dock.idc:system/usr/idc/Motorola_Mobility_Motorola_HD_Dock.idc \
+$(VENDOR_BLOB_FOLDER)/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+$(VENDOR_BLOB_FOLDER)/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+$(VENDOR_BLOB_FOLDER)/usr/keychars/omap4-keypad.kcm:system/usr/keychars/omap4-keypad.kcm \
+$(VENDOR_BLOB_FOLDER)/usr/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
+$(VENDOR_BLOB_FOLDER)/usr/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
+$(VENDOR_BLOB_FOLDER)/usr/keylayout/atmxt-i2c.kl:system/usr/keylayout/atmxt-i2c.kl \
+$(VENDOR_BLOB_FOLDER)/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+$(VENDOR_BLOB_FOLDER)/usr/keylayout/cpcap-key.kl:system/usr/keylayout/cpcap-key.kl \
+$(VENDOR_BLOB_FOLDER)/usr/keylayout/omap4-keypad.kl:system/usr/keylayout/omap4-keypad.kl \
+$(VENDOR_BLOB_FOLDER)/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
 
 # include lib
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/lib/libadkutils.so:/system/lib/libadkutils.so \
-vendor/motorola/maserati/proprietary/lib/libamcm.so:/system/lib/libamcm.so \
-vendor/motorola/maserati/proprietary/lib/libbattd.so:/system/lib/libbattd.so \
-vendor/motorola/maserati/proprietary/lib/libbcbmsg.so:/system/lib/libbcbmsg.so \
-vendor/motorola/maserati/proprietary/lib/libbt-aptx-4.0.3.so:/system/lib/libbt-aptx-4.0.3.so \
-vendor/motorola/maserati/proprietary/lib/libcaps.so:/system/lib/libcaps.so \
-vendor/motorola/maserati/proprietary/lib/libcapsjava.so:/system/lib/libcapsjava.so \
-vendor/motorola/maserati/proprietary/lib/libdataencrypt.so:/system/lib/libdataencrypt.so \
-vendor/motorola/maserati/proprietary/lib/libdataencrypt_tpa.so:/system/lib/libdataencrypt_tpa.so \
-vendor/motorola/maserati/proprietary/lib/libdataencrypt_utils.so:/system/lib/libdataencrypt_utils.so \
-vendor/motorola/maserati/proprietary/lib/libdevicestats.so:/system/lib/libdevicestats.so \
-vendor/motorola/maserati/proprietary/lib/libdlnahttpjni.so:/system/lib/libdlnahttpjni.so \
-vendor/motorola/maserati/proprietary/lib/libdlnajni.so:/system/lib/libdlnajni.so \
-vendor/motorola/maserati/proprietary/lib/libdlnaprofileparser.so:/system/lib/libdlnaprofileparser.so \
-vendor/motorola/maserati/proprietary/lib/libdlnasysjni.so:/system/lib/libdlnasysjni.so \
-vendor/motorola/maserati/proprietary/lib/libdmengine.so:/system/lib/libdmengine.so \
-vendor/motorola/maserati/proprietary/lib/libdmjavaplugin.so:/system/lib/libdmjavaplugin.so \
-vendor/motorola/maserati/proprietary/lib/libdockcommjni.so:/system/lib/libdockcommjni.so \
-vendor/motorola/maserati/proprietary/lib/libevbridge.so:/system/lib/libevbridge.so \
-vendor/motorola/maserati/proprietary/lib/libexempi.so:/system/lib/libexempi.so \
-vendor/motorola/maserati/proprietary/lib/libextdispjni.so:/system/lib/libextdispjni.so \
-vendor/motorola/maserati/proprietary/lib/libhdcp.so:/system/lib/libhdcp.so \
-vendor/motorola/maserati/proprietary/lib/libhdmi.so:/system/lib/libhdmi.so \
-vendor/motorola/maserati/proprietary/lib/libimage_jni.so:/system/lib/libimage_jni.so \
-vendor/motorola/maserati/proprietary/lib/libjni_nwp.so:/system/lib/libjni_nwp.so \
-vendor/motorola/maserati/proprietary/lib/libmetainfo.so:/system/lib/libmetainfo.so \
-vendor/motorola/maserati/proprietary/lib/libmot_atcmd.so:/system/lib/libmot_atcmd.so \
-vendor/motorola/maserati/proprietary/lib/libmot_bluetooth_jni.so:/system/lib/libmot_bluetooth_jni.so \
-vendor/motorola/maserati/proprietary/lib/libmotdrm1.so:/system/lib/libmotdrm1.so \
-vendor/motorola/maserati/proprietary/lib/libmotdrm1_jni.so:/system/lib/libmotdrm1_jni.so \
-vendor/motorola/maserati/proprietary/lib/libmotodbgutils.so:/system/lib/libmotodbgutils.so \
-vendor/motorola/maserati/proprietary/lib/libmoto_netutil.so:/system/lib/libmoto_netutil.so \
-vendor/motorola/maserati/proprietary/lib/libmss.so:/system/lib/libmss.so \
-vendor/motorola/maserati/proprietary/lib/libmss.so.sig:/system/lib/libmss.so.sig \
-vendor/motorola/maserati/proprietary/lib/libnativedrm1.so:/system/lib/libnativedrm1.so \
-vendor/motorola/maserati/proprietary/lib/libnbgm.so:/system/lib/libnbgm.so \
-vendor/motorola/maserati/proprietary/lib/libnmea.so:/system/lib/libnmea.so \
-vendor/motorola/maserati/proprietary/lib/libpanorama.so:/system/lib/libpanorama.so \
-vendor/motorola/maserati/proprietary/lib/libpanorama_jni.so:/system/lib/libpanorama_jni.so \
-vendor/motorola/maserati/proprietary/lib/libPhotoEditor.so:/system/lib/libPhotoEditor.so \
-vendor/motorola/maserati/proprietary/lib/libphotoflow.so:/system/lib/libphotoflow.so \
-vendor/motorola/maserati/proprietary/lib/libpkip.so:/system/lib/libpkip.so \
-vendor/motorola/maserati/proprietary/lib/libpppd_plugin-ril.so:/system/lib/libpppd_plugin-ril.so \
-vendor/motorola/maserati/proprietary/lib/libprovlib.so:/system/lib/libprovlib.so \
-vendor/motorola/maserati/proprietary/lib/libquicksec.so:/system/lib/libquicksec.so \
-vendor/motorola/maserati/proprietary/lib/libscalado.so:/system/lib/libscalado.so \
-vendor/motorola/maserati/proprietary/lib/libsensorhub_jni.so:/system/lib/libsensorhub_jni.so \
-vendor/motorola/maserati/proprietary/lib/libsmapi.so:/system/lib/libsmapi.so \
-vendor/motorola/maserati/proprietary/lib/libtf_crypto_sst.so:/system/lib/libtf_crypto_sst.so \
-vendor/motorola/maserati/proprietary/lib/libthermal_config.so:/system/lib/libthermal_config.so \
-vendor/motorola/maserati/proprietary/lib/libthermal_manager.so:/system/lib/libthermal_manager.so \
-vendor/motorola/maserati/proprietary/lib/libtpa.so:/system/lib/libtpa.so \
-vendor/motorola/maserati/proprietary/lib/libtpa_core.so:/system/lib/libtpa_core.so \
-vendor/motorola/maserati/proprietary/lib/libui3d.so:/system/lib/libui3d.so \
-vendor/motorola/maserati/proprietary/lib/libvideoeditorlite.so:/system/lib/libvideoeditorlite.so \
-vendor/motorola/maserati/proprietary/lib/libvpnclient_jni.so:/system/lib/libvpnclient_jni.so \
-vendor/motorola/maserati/proprietary/lib/libvsuite_mot_vs40_cmb.so:/system/lib/libvsuite_mot_vs40_cmb.so \
-vendor/motorola/maserati/proprietary/lib/libwbxmlparser.so:/system/lib/libwbxmlparser.so \
-vendor/motorola/maserati/proprietary/lib/libWVphoneAPI.so:/system/lib/libWVphoneAPI.so \
-vendor/motorola/maserati/proprietary/lib/libXmp_jni.so:/system/lib/libXmp_jni.so \
-vendor/motorola/maserati/proprietary/lib/libxmpcore.so:/system/lib/libxmpcore.so \
-vendor/motorola/maserati/proprietary/lib/libWifiAPHardware.so:/system/lib/libWifiAPHardware.so \
-vendor/motorola/maserati/proprietary/lib/libOMX.ITTIAM.AAC.encode.so:/system/lib/libOMX.ITTIAM.AAC.encode.so \
+$(VENDOR_BLOB_FOLDER)/lib/libadkutils.so:/system/lib/libadkutils.so \
+$(VENDOR_BLOB_FOLDER)/lib/libamcm.so:/system/lib/libamcm.so \
+$(VENDOR_BLOB_FOLDER)/lib/libbattd.so:/system/lib/libbattd.so \
+$(VENDOR_BLOB_FOLDER)/lib/libbcbmsg.so:/system/lib/libbcbmsg.so \
+$(VENDOR_BLOB_FOLDER)/lib/libbt-aptx-4.0.3.so:/system/lib/libbt-aptx-4.0.3.so \
+$(VENDOR_BLOB_FOLDER)/lib/libcaps.so:/system/lib/libcaps.so \
+$(VENDOR_BLOB_FOLDER)/lib/libcapsjava.so:/system/lib/libcapsjava.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdataencrypt.so:/system/lib/libdataencrypt.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdataencrypt_tpa.so:/system/lib/libdataencrypt_tpa.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdataencrypt_utils.so:/system/lib/libdataencrypt_utils.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdevicestats.so:/system/lib/libdevicestats.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdlnahttpjni.so:/system/lib/libdlnahttpjni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdlnajni.so:/system/lib/libdlnajni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdlnaprofileparser.so:/system/lib/libdlnaprofileparser.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdlnasysjni.so:/system/lib/libdlnasysjni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdmengine.so:/system/lib/libdmengine.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdmjavaplugin.so:/system/lib/libdmjavaplugin.so \
+$(VENDOR_BLOB_FOLDER)/lib/libdockcommjni.so:/system/lib/libdockcommjni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libevbridge.so:/system/lib/libevbridge.so \
+$(VENDOR_BLOB_FOLDER)/lib/libexempi.so:/system/lib/libexempi.so \
+$(VENDOR_BLOB_FOLDER)/lib/libextdispjni.so:/system/lib/libextdispjni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libhdcp.so:/system/lib/libhdcp.so \
+$(VENDOR_BLOB_FOLDER)/lib/libhdmi.so:/system/lib/libhdmi.so \
+$(VENDOR_BLOB_FOLDER)/lib/libimage_jni.so:/system/lib/libimage_jni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libjni_nwp.so:/system/lib/libjni_nwp.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmetainfo.so:/system/lib/libmetainfo.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmot_atcmd.so:/system/lib/libmot_atcmd.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmot_bluetooth_jni.so:/system/lib/libmot_bluetooth_jni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmotdrm1.so:/system/lib/libmotdrm1.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmotdrm1_jni.so:/system/lib/libmotdrm1_jni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmotodbgutils.so:/system/lib/libmotodbgutils.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmoto_netutil.so:/system/lib/libmoto_netutil.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmss.so:/system/lib/libmss.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmss.so.sig:/system/lib/libmss.so.sig \
+$(VENDOR_BLOB_FOLDER)/lib/libnativedrm1.so:/system/lib/libnativedrm1.so \
+$(VENDOR_BLOB_FOLDER)/lib/libnbgm.so:/system/lib/libnbgm.so \
+$(VENDOR_BLOB_FOLDER)/lib/libnmea.so:/system/lib/libnmea.so \
+$(VENDOR_BLOB_FOLDER)/lib/libpanorama.so:/system/lib/libpanorama.so \
+$(VENDOR_BLOB_FOLDER)/lib/libpanorama_jni.so:/system/lib/libpanorama_jni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libPhotoEditor.so:/system/lib/libPhotoEditor.so \
+$(VENDOR_BLOB_FOLDER)/lib/libphotoflow.so:/system/lib/libphotoflow.so \
+$(VENDOR_BLOB_FOLDER)/lib/libpkip.so:/system/lib/libpkip.so \
+$(VENDOR_BLOB_FOLDER)/lib/libpppd_plugin-ril.so:/system/lib/libpppd_plugin-ril.so \
+$(VENDOR_BLOB_FOLDER)/lib/libprovlib.so:/system/lib/libprovlib.so \
+$(VENDOR_BLOB_FOLDER)/lib/libquicksec.so:/system/lib/libquicksec.so \
+$(VENDOR_BLOB_FOLDER)/lib/libscalado.so:/system/lib/libscalado.so \
+$(VENDOR_BLOB_FOLDER)/lib/libsensorhub_jni.so:/system/lib/libsensorhub_jni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libsmapi.so:/system/lib/libsmapi.so \
+$(VENDOR_BLOB_FOLDER)/lib/libtf_crypto_sst.so:/system/lib/libtf_crypto_sst.so \
+$(VENDOR_BLOB_FOLDER)/lib/libthermal_config.so:/system/lib/libthermal_config.so \
+$(VENDOR_BLOB_FOLDER)/lib/libthermal_manager.so:/system/lib/libthermal_manager.so \
+$(VENDOR_BLOB_FOLDER)/lib/libtpa.so:/system/lib/libtpa.so \
+$(VENDOR_BLOB_FOLDER)/lib/libtpa_core.so:/system/lib/libtpa_core.so \
+$(VENDOR_BLOB_FOLDER)/lib/libui3d.so:/system/lib/libui3d.so \
+$(VENDOR_BLOB_FOLDER)/lib/libvideoeditorlite.so:/system/lib/libvideoeditorlite.so \
+$(VENDOR_BLOB_FOLDER)/lib/libvpnclient_jni.so:/system/lib/libvpnclient_jni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libvsuite_mot_vs40_cmb.so:/system/lib/libvsuite_mot_vs40_cmb.so \
+$(VENDOR_BLOB_FOLDER)/lib/libwbxmlparser.so:/system/lib/libwbxmlparser.so \
+$(VENDOR_BLOB_FOLDER)/lib/libWVphoneAPI.so:/system/lib/libWVphoneAPI.so \
+$(VENDOR_BLOB_FOLDER)/lib/libXmp_jni.so:/system/lib/libXmp_jni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libxmpcore.so:/system/lib/libxmpcore.so \
+$(VENDOR_BLOB_FOLDER)/lib/libWifiAPHardware.so:/system/lib/libWifiAPHardware.so \
+$(VENDOR_BLOB_FOLDER)/lib/libOMX.ITTIAM.AAC.encode.so:/system/lib/libOMX.ITTIAM.AAC.encode.so \
 
 # RIL files
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/bin/base64:/system/bin/base64 \
-vendor/motorola/maserati/proprietary/bin/extract-embedded-files:/system/bin/extract-embedded-files \
-vendor/motorola/maserati/proprietary/bin/mm-wrigley-qc-dump.sh:/system/bin/mm-wrigley-qc-dump.sh \
-vendor/motorola/maserati/proprietary/bin/oem-iptables-init.sh:/system/bin/oem-iptables-init.sh \
-vendor/motorola/maserati/proprietary/bin/vril-dump:/system/bin/vril-dump \
-vendor/motorola/maserati/proprietary/bin/wrigley-diag.sh:/system/bin/wrigley-diag.sh \
-vendor/motorola/maserati/proprietary/bin/wrigley-dump.sh:/system/bin/wrigley-dump.sh \
-vendor/motorola/maserati/proprietary/bin/wrigley-fetch-mpr.sh:/system/bin/wrigley-fetch-mpr.sh \
-vendor/motorola/maserati/proprietary/bin/wrigley-iptables.sh:/system/bin/wrigley-iptables.sh \
-vendor/motorola/maserati/proprietary/lib/libbabysit.so:/system/lib/libbabysit.so \
-vendor/motorola/maserati/proprietary/lib/libb64.so:/system/lib/libb64.so \
-vendor/motorola/maserati/proprietary/lib/lib-mot-lte-ril.so:/system/lib/lib-mot-lte-ril.so \
-vendor/motorola/maserati/proprietary/lib/libmoto_mdmctrl.so:/system/lib/libmoto_mdmctrl.so \
-vendor/motorola/maserati/proprietary/lib/libmoto_nwif_ril.so:/system/lib/libmoto_nwif_ril.so \
-vendor/motorola/maserati/proprietary/lib/libmoto_qmi_ril.so:/system/lib/libmoto_qmi_ril.so \
-vendor/motorola/maserati/proprietary/lib/libmoto_ril.so:/system/lib/libmoto_ril.so \
-vendor/motorola/maserati/proprietary/lib/libmotdb.so:/system/lib/libmotdb.so \
-vendor/motorola/maserati/proprietary/lib/librds_util.so:/system/lib/librds_util.so \
-vendor/motorola/maserati/proprietary/lib/libril_rds.so:/system/lib/libril_rds.so \
-vendor/motorola/maserati/proprietary/lib/moto-ril-multimode.so:/system/lib/moto-ril-multimode.so \
-vendor/motorola/maserati/proprietary/lib/libims_client_jni.so:/system/lib/libims_client_jni.so \
+$(VENDOR_BLOB_FOLDER)/bin/base64:/system/bin/base64 \
+$(VENDOR_BLOB_FOLDER)/bin/extract-embedded-files:/system/bin/extract-embedded-files \
+$(VENDOR_BLOB_FOLDER)/bin/mm-wrigley-qc-dump.sh:/system/bin/mm-wrigley-qc-dump.sh \
+$(VENDOR_BLOB_FOLDER)/bin/oem-iptables-init.sh:/system/bin/oem-iptables-init.sh \
+$(VENDOR_BLOB_FOLDER)/bin/vril-dump:/system/bin/vril-dump \
+$(VENDOR_BLOB_FOLDER)/bin/wrigley-diag.sh:/system/bin/wrigley-diag.sh \
+$(VENDOR_BLOB_FOLDER)/bin/wrigley-dump.sh:/system/bin/wrigley-dump.sh \
+$(VENDOR_BLOB_FOLDER)/bin/wrigley-fetch-mpr.sh:/system/bin/wrigley-fetch-mpr.sh \
+$(VENDOR_BLOB_FOLDER)/bin/wrigley-iptables.sh:/system/bin/wrigley-iptables.sh \
+$(VENDOR_BLOB_FOLDER)/lib/libbabysit.so:/system/lib/libbabysit.so \
+$(VENDOR_BLOB_FOLDER)/lib/libb64.so:/system/lib/libb64.so \
+$(VENDOR_BLOB_FOLDER)/lib/lib-mot-lte-ril.so:/system/lib/lib-mot-lte-ril.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmoto_mdmctrl.so:/system/lib/libmoto_mdmctrl.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmoto_nwif_ril.so:/system/lib/libmoto_nwif_ril.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmoto_qmi_ril.so:/system/lib/libmoto_qmi_ril.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmoto_ril.so:/system/lib/libmoto_ril.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmotdb.so:/system/lib/libmotdb.so \
+$(VENDOR_BLOB_FOLDER)/lib/librds_util.so:/system/lib/librds_util.so \
+$(VENDOR_BLOB_FOLDER)/lib/libril_rds.so:/system/lib/libril_rds.so \
+$(VENDOR_BLOB_FOLDER)/lib/moto-ril-multimode.so:/system/lib/moto-ril-multimode.so \
+$(VENDOR_BLOB_FOLDER)/lib/libims_client_jni.so:/system/lib/libims_client_jni.so \
 
 # include lib/hw
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/lib/hw/gps.maserati.so:/system/lib/hw/gps.maserati.so \
-vendor/motorola/maserati/proprietary/lib/hw/lights.maserati.so:/system/lib/hw/lights.maserati.so \
-vendor/motorola/maserati/proprietary/lib/hw/sensors.maserati.so:/system/lib/hw/sensors.maserati.so \
+$(VENDOR_BLOB_FOLDER)/lib/hw/gps.maserati.so:/system/lib/hw/gps.maserati.so \
+$(VENDOR_BLOB_FOLDER)/lib/hw/lights.maserati.so:/system/lib/hw/lights.maserati.so \
+$(VENDOR_BLOB_FOLDER)/lib/hw/sensors.maserati.so:/system/lib/hw/sensors.maserati.so \
 
 # system/xbin
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/xbin/drm1_func_test:/system/xbin/drm1_func_test \
-vendor/motorola/maserati/proprietary/xbin/dexdump:/system/xbin/dexdump \
-vendor/motorola/maserati/proprietary/xbin/nc:/system/xbin/nc \
-
-# Camera libs we need for now
-#PRODUCT_COPY_FILES += \
-#vendor/motorola/maserati/proprietary/lib/libpostcapimgproc_intf.so:/system/lib/libpostcapimgproc_intf.so \
-#vendor/motorola/maserati/proprietary/lib/hw/camera.omap4.so:/system/lib/hw/camera.omap4.so \
+$(VENDOR_BLOB_FOLDER)/xbin/drm1_func_test:/system/xbin/drm1_func_test \
+$(VENDOR_BLOB_FOLDER)/xbin/dexdump:/system/xbin/dexdump \
+$(VENDOR_BLOB_FOLDER)/xbin/nc:/system/xbin/nc \
 
 # Load TCMD libs
 PRODUCT_COPY_FILES += \
-vendor/motorola/maserati/proprietary/lib/libaudiotcmd.so:/system/lib/libaudiotcmd.so \
-vendor/motorola/maserati/proprietary/lib/libfm_stack.so:/system/lib/libfm_stack.so \
-vendor/motorola/maserati/proprietary/lib/libfmchr.so:/system/lib/libfmchr.so \
-vendor/motorola/maserati/proprietary/lib/libmcphal.so:/system/lib/libmcphal.so \
-vendor/motorola/maserati/proprietary/lib/libtcmdcameraservice.so:/system/lib/libtcmdcameraservice.so \
+$(VENDOR_BLOB_FOLDER)/lib/libaudiotcmd.so:/system/lib/libaudiotcmd.so \
+$(VENDOR_BLOB_FOLDER)/lib/libfm_stack.so:/system/lib/libfm_stack.so \
+$(VENDOR_BLOB_FOLDER)/lib/libfmchr.so:/system/lib/libfmchr.so \
+$(VENDOR_BLOB_FOLDER)/lib/libmcphal.so:/system/lib/libmcphal.so \
+$(VENDOR_BLOB_FOLDER)/lib/libtcmdcameraservice.so:/system/lib/libtcmdcameraservice.so \
 
