@@ -177,6 +177,7 @@ $(VENDOR_BLOB_FOLDER)/bin/base64:/system/bin/base64 \
 $(VENDOR_BLOB_FOLDER)/bin/extract-embedded-files:/system/bin/extract-embedded-files \
 $(VENDOR_BLOB_FOLDER)/bin/mm-wrigley-qc-dump.sh:/system/bin/mm-wrigley-qc-dump.sh \
 $(VENDOR_BLOB_FOLDER)/bin/oem-iptables-init.sh:/system/bin/oem-iptables-init.sh \
+$(VENDOR_BLOB_FOLDER)/bin/pppd-ril:/system/bin/pppd-ril \
 $(VENDOR_BLOB_FOLDER)/bin/vril-dump:/system/bin/vril-dump \
 $(VENDOR_BLOB_FOLDER)/bin/wrigley-diag.sh:/system/bin/wrigley-diag.sh \
 $(VENDOR_BLOB_FOLDER)/bin/wrigley-dump.sh:/system/bin/wrigley-dump.sh \
