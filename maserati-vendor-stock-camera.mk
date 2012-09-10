@@ -75,5 +75,5 @@ PRODUCT_COPY_FILES += \
 
 # system/etc/omapcam/module2
 PRODUCT_COPY_FILES += \
-    $(VENDOR_BLOB_FOLDER)/etc/omapcam/module2/cid1040_ov7739_sensor_config_dcc.bin:system/etc/omapcam/module2/cid1040_ov7739_sensor_config_dcc.bin \
+    $(VENDOR_BLOB_FOLDER)/etc/omapcam/module2/cid1044_mt9m114_sensor_config_dcc.bin:system/etc/omapcam/module2/cid1044_mt9m114_sensor_config_dcc.bin \
 
