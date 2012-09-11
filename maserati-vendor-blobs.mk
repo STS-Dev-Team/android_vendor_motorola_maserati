@@ -33,7 +33,7 @@ $(VENDOR_BLOB_FOLDER)/bin/testpppd:/system/bin/testpppd \
 $(VENDOR_BLOB_FOLDER)/bin/thermaldaemon:/system/bin/thermaldaemon \
 $(VENDOR_BLOB_FOLDER)/bin/tty2ttyd:/system/bin/tty2ttyd \
 $(VENDOR_BLOB_FOLDER)/bin/usbd:/system/bin/usbd \
-$(VENDOR_BLOB_FOLDER)/bin/whisperd:/system/bin/whisperd \
+$(VENDOR_BLOB_FOLDER)/bin/whisperd:/system/bin/whisperd
 
 # system/etc
 PRODUCT_COPY_FILES += \
@@ -50,7 +50,7 @@ $(VENDOR_BLOB_FOLDER)/etc/smc_android_cfg.ini:/system/etc/smc_android_cfg.ini \
 $(VENDOR_BLOB_FOLDER)/etc/smc_pa.ift:/system/etc/smc_pa.ift \
 $(VENDOR_BLOB_FOLDER)/etc/smc_pa_pk_4_8Mb_ipa.bin:/system/etc/smc_pa_pk_4_8Mb_ipa.bin \
 $(VENDOR_BLOB_FOLDER)/etc/smc_pa_pk_4_ipa.bin:/system/etc/smc_pa_pk_4_ipa.bin \
-$(VENDOR_BLOB_FOLDER)/etc/supportedlocales.conf:/system/etc/supportedlocales.conf \
+$(VENDOR_BLOB_FOLDER)/etc/supportedlocales.conf:/system/etc/supportedlocales.conf
 
 
 PRODUCT_COPY_FILES += \
@@ -64,13 +64,13 @@ $(VENDOR_BLOB_FOLDER)/etc/wifi/wlan_fem.ini:/system/etc/wifi/wlan_fem.ini \
 $(VENDOR_BLOB_FOLDER)/etc/motorola/12m/key_code_map.txt:system/etc/motorola/12m/key_code_map.txt \
 $(VENDOR_BLOB_FOLDER)/etc/security/suplcerts.bks:system/etc/security/suplcerts.bks \
 $(VENDOR_BLOB_FOLDER)/etc/permissions/com.verizon.hardware.telephony.ehrpd.xml:system/etc/permissions/com.verizon.hardware.telephony.ehrpd.xml \
-$(VENDOR_BLOB_FOLDER)/etc/permissions/com.verizon.hardware.telephony.lte.xml:system/etc/permissions/com.verizon.hardware.telephony.lte.xml \
+$(VENDOR_BLOB_FOLDER)/etc/permissions/com.verizon.hardware.telephony.lte.xml:system/etc/permissions/com.verizon.hardware.telephony.lte.xml
 
 # webtop
 PRODUCT_COPY_FILES += \
 $(VENDOR_BLOB_FOLDER)/usr/idc/evfwd.idc:system/usr/idc/evfwd.idc \
 $(VENDOR_BLOB_FOLDER)/usr/keychars/evfwd.kcm:system/usr/keychars/evfwd.kcm \
-$(VENDOR_BLOB_FOLDER)/usr/keylayout/evfwd.kl:system/usr/keylayout/evfwd.kl \
+$(VENDOR_BLOB_FOLDER)/usr/keylayout/evfwd.kl:system/usr/keylayout/evfwd.kl
 
 # system/usr
 PRODUCT_COPY_FILES += \
@@ -103,7 +103,7 @@ $(VENDOR_BLOB_FOLDER)/usr/keylayout/atmxt-i2c.kl:system/usr/keylayout/atmxt-i2c.
 $(VENDOR_BLOB_FOLDER)/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 $(VENDOR_BLOB_FOLDER)/usr/keylayout/cpcap-key.kl:system/usr/keylayout/cpcap-key.kl \
 $(VENDOR_BLOB_FOLDER)/usr/keylayout/omap4-keypad.kl:system/usr/keylayout/omap4-keypad.kl \
-$(VENDOR_BLOB_FOLDER)/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+$(VENDOR_BLOB_FOLDER)/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
 
 # include lib
 PRODUCT_COPY_FILES += \
@@ -169,7 +169,7 @@ $(VENDOR_BLOB_FOLDER)/lib/libWVphoneAPI.so:/system/lib/libWVphoneAPI.so \
 $(VENDOR_BLOB_FOLDER)/lib/libXmp_jni.so:/system/lib/libXmp_jni.so \
 $(VENDOR_BLOB_FOLDER)/lib/libxmpcore.so:/system/lib/libxmpcore.so \
 $(VENDOR_BLOB_FOLDER)/lib/libWifiAPHardware.so:/system/lib/libWifiAPHardware.so \
-$(VENDOR_BLOB_FOLDER)/lib/libOMX.ITTIAM.AAC.encode.so:/system/lib/libOMX.ITTIAM.AAC.encode.so \
+$(VENDOR_BLOB_FOLDER)/lib/libOMX.ITTIAM.AAC.encode.so:/system/lib/libOMX.ITTIAM.AAC.encode.so
 
 # RIL files
 PRODUCT_COPY_FILES += \
@@ -194,19 +194,17 @@ $(VENDOR_BLOB_FOLDER)/lib/libmotdb.so:/system/lib/libmotdb.so \
 $(VENDOR_BLOB_FOLDER)/lib/librds_util.so:/system/lib/librds_util.so \
 $(VENDOR_BLOB_FOLDER)/lib/libril_rds.so:/system/lib/libril_rds.so \
 $(VENDOR_BLOB_FOLDER)/lib/moto-ril-multimode.so:/system/lib/moto-ril-multimode.so \
-$(VENDOR_BLOB_FOLDER)/lib/libims_client_jni.so:/system/lib/libims_client_jni.so \
+$(VENDOR_BLOB_FOLDER)/lib/libims_client_jni.so:/system/lib/libims_client_jni.so
 
 # include lib/hw
 PRODUCT_COPY_FILES += \
 $(VENDOR_BLOB_FOLDER)/lib/hw/gps.maserati.so:/system/lib/hw/gps.maserati.so \
 $(VENDOR_BLOB_FOLDER)/lib/hw/lights.maserati.so:/system/lib/hw/lights.maserati.so \
-$(VENDOR_BLOB_FOLDER)/lib/hw/sensors.maserati.so:/system/lib/hw/sensors.maserati.so \
+$(VENDOR_BLOB_FOLDER)/lib/hw/sensors.maserati.so:/system/lib/hw/sensors.maserati.so
 
 # system/xbin
 PRODUCT_COPY_FILES += \
-$(VENDOR_BLOB_FOLDER)/xbin/drm1_func_test:/system/xbin/drm1_func_test \
-$(VENDOR_BLOB_FOLDER)/xbin/dexdump:/system/xbin/dexdump \
-$(VENDOR_BLOB_FOLDER)/xbin/nc:/system/xbin/nc \
+$(VENDOR_BLOB_FOLDER)/xbin/drm1_func_test:/system/xbin/drm1_func_test
 
 # Load TCMD libs
 PRODUCT_COPY_FILES += \
@@ -214,5 +212,5 @@ $(VENDOR_BLOB_FOLDER)/lib/libaudiotcmd.so:/system/lib/libaudiotcmd.so \
 $(VENDOR_BLOB_FOLDER)/lib/libfm_stack.so:/system/lib/libfm_stack.so \
 $(VENDOR_BLOB_FOLDER)/lib/libfmchr.so:/system/lib/libfmchr.so \
 $(VENDOR_BLOB_FOLDER)/lib/libmcphal.so:/system/lib/libmcphal.so \
-$(VENDOR_BLOB_FOLDER)/lib/libtcmdcameraservice.so:/system/lib/libtcmdcameraservice.so \
+$(VENDOR_BLOB_FOLDER)/lib/libtcmdcameraservice.so:/system/lib/libtcmdcameraservice.so
 
