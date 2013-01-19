@@ -168,7 +168,6 @@ $(VENDOR_BLOB_FOLDER)/lib/libims_client_jni.so:/system/lib/libims_client_jni.so
 # include lib/hw
 PRODUCT_COPY_FILES += \
 $(VENDOR_BLOB_FOLDER)/lib/hw/gps.maserati.so:/system/lib/hw/gps.maserati.so \
-$(VENDOR_BLOB_FOLDER)/lib/hw/lights.maserati.so:/system/lib/hw/lights.maserati.so \
 $(VENDOR_BLOB_FOLDER)/lib/hw/sensors.maserati.so:/system/lib/hw/sensors.maserati.so
 
 # system/xbin
