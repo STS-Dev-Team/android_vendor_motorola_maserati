@@ -2,6 +2,8 @@ VENDOR_BLOB_FOLDER := vendor/motorola/maserati/proprietary
 
 # system/bin
 PRODUCT_COPY_FILES += \
+$(VENDOR_BLOB_FOLDER)/bin/ap_gain.bin:/system/bin/ap_gain.bin \
+$(VENDOR_BLOB_FOLDER)/bin/ap_gain_mmul.bin:/system/bin/ap_gain_mmul.bin \
 $(VENDOR_BLOB_FOLDER)/bin/akmd8975:/system/bin/akmd8975 \
 $(VENDOR_BLOB_FOLDER)/bin/batch:/system/bin/batch \
 $(VENDOR_BLOB_FOLDER)/bin/battd:/system/bin/battd \
@@ -100,5 +102,6 @@ $(VENDOR_BLOB_FOLDER)/lib/libims_client_jni.so:/system/lib/libims_client_jni.so
 
 # system/lib/hw
 PRODUCT_COPY_FILES += \
+$(VENDOR_BLOB_FOLDER)/lib/hw/audio.primary.omap4.so:/system/lib/hw/audio.primary.omap4.so \
 $(VENDOR_BLOB_FOLDER)/lib/hw/gps.maserati.so:/system/lib/hw/gps.maserati.so \
 $(VENDOR_BLOB_FOLDER)/lib/hw/sensors.maserati.so:/system/lib/hw/sensors.maserati.so
